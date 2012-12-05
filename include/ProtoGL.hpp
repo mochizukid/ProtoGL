@@ -15,5 +15,4 @@
 #include "objects/AxisObject.hpp"
 #include "objects/CubeObject.hpp"
 #include "objects/GridObject.hpp"
-#include "objects/PlaneObject.hpp"
 #include "objects/SphereObject.hpp"

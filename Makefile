@@ -1,7 +1,7 @@
 TARGET = main
 OBJS = main.o
 
-CFLAGS = -I./include
+CFLAGS = -I./include -Wall
 LIBS = -lglut -lGLU -lGL
 
 $(TARGET): $(OBJS)
