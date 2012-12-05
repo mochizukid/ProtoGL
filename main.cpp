@@ -29,7 +29,7 @@ protected:
 
         cube->Translate(1, 0.5, 0);
 
-        pgl::Material *material2 = pgl::Material::Create(pgl::Material::JADE);
+        pgl::Material *material2 = pgl::Material::Create(pgl::Material::EMERALD);
         pgl::Object3D *cube2 = new pgl::CubeObject(0.5, material2);
         cube->Add(cube2);
         _cube2 = cube2;
