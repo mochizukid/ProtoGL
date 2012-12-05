@@ -21,16 +21,22 @@ public:
         }
     }
     
-    void SetPosition(double x, double y, double z) { _position.Set(x, y, z); _needUpdateMatrix = true; }
     void SetPosition(const Vector3 &v) { _position = v; _needUpdateMatrix = true; }
+    void SetPositionX(double x) { _position.x = x; _needUpdateMatrix = true; }
+    void SetPositionY(double y) { _position.y = y; _needUpdateMatrix = true; }
+    void SetPositionZ(double z) { _position.z = z; _needUpdateMatrix = true; }
     const Vector3 &GetPosition() const { return _position; }
     
-    void SetRotation(double x, double y, double z) { _rotation.Set(x, y, z); _needUpdateMatrix = true; }
     void SetRotation(const Vector3 &v) { _rotation = v; _needUpdateMatrix = true; }
+    void SetRotationX(double x) { _rotation.x = x; _needUpdateMatrix = true; }
+    void SetRotationY(double y) { _rotation.y = y; _needUpdateMatrix = true; }
+    void SetRotationZ(double z) { _rotation.z = z; _needUpdateMatrix = true; }
     const Vector3 &GetRotation() const { return _rotation; }
     
-    void SetScale(double x, double y, double z) { _scale.Set(x, y, z); _needUpdateMatrix = true; }
     void SetScale(const Vector3 &v) { _scale = v; _needUpdateMatrix = true; }
+    void SetScaleX(double x) { _scale.x = x; _needUpdateMatrix = true; }
+    void SetScaleY(double y) { _scale.y = y; _needUpdateMatrix = true; }
+    void SetScaleZ(double z) { _scale.z = z; _needUpdateMatrix = true; }
     const Vector3 &GetScale() const { return _scale; }
     
     void Translate(double dx, double dy, double dz) {

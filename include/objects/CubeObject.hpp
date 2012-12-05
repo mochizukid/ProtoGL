@@ -2,7 +2,6 @@
 
 #include <GL/freeglut.h>
 #include "core/Object3D.hpp"
-#include "core/Vector3.hpp"
 #include "core/Material.hpp"
 
 namespace pgl {

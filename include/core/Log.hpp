@@ -6,9 +6,13 @@ namespace pgl {
 
 class Log {
 public:
-    enum LogLevel { DEBUG, INFO, ERROR, NONE };
+    enum LogLevel { VERBOSE, DEBUG, INFO, ERROR, NONE };
     
     static void SetLevel(LogLevel level) { _level = level; }
+    
+    static void Verbose(const char *msg) {
+        if (_level <= VERBOSE) printf("[V] %s\n", msg);
+    }
     
     static void Debug(const char *msg) {
         if (_level <= DEBUG) printf("[D] %s\n", msg);
@@ -20,6 +24,10 @@ public:
     
     static void Error(const char *msg) {
         if (_level <= ERROR) printf("[E] %s\n", msg);
+    }
+    
+    static void Print(const char *msg) {
+        printf("%s\n", msg);
     }
     
 
