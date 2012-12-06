@@ -1,4 +1,5 @@
 #pragma once
+
 #include <assert.h>
 #include <GL/freeglut.h>
 #include "core/Scene.hpp"

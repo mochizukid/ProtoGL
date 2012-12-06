@@ -1,5 +1,7 @@
 #pragma once
 
+#include <GL/freeglut.h>
+#include <assert.h>
 #include <list>
 #include "core/Vector3.hpp"
 #include "core/Material.hpp"

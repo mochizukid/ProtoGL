@@ -1,5 +1,6 @@
 #pragma once
 
+#include <GL/freeglut.h>
 #include <vector>
 #include <list>
 #include "core/Vector3.hpp"

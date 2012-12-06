@@ -1,5 +1,6 @@
 #pragma once
 
+#include <GL/freeglut.h>
 #include <string.h>
 #include "Color.hpp"
 

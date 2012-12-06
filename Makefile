@@ -11,4 +11,4 @@ $(TARGET): $(OBJS)
 	$(CXX) -c -o $@ $< $(CFLAGS)
 
 clean:
-	$(RM) $(TARGET) $(OBJS) *~ src/*~ src/*/*~
+	$(RM) $(TARGET) $(OBJS) *~ include/*~ include/*/*~

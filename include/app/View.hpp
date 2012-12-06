@@ -1,5 +1,8 @@
 #pragma once
 
+#define _USE_MATH_DEFINES
+
+#include <math.h>
 #include <assert.h>
 #include <GL/freeglut.h>
 #include "core/Renderer.hpp"
@@ -18,6 +21,13 @@ public:
         if (!onCreate()) {
             return; // prevent default
         }
+
+        Log::Print("Mouse:");
+        Log::Print("\t Left drag : move camera position");
+        Log::Print("Key:");
+        Log::Print("\t ESC       : exit");
+        Log::Print("\t F11       : toggle fullscreen mode");
+        Log::Print("\t 'd'       : toggle output camera position");
     }
     
     void OnDestroy(void) {
@@ -167,7 +177,7 @@ public:
             _camera.SetPosition(dst2);
 
             if (_doShowCameraPos) {
-                sprintf(msg, "Camera pos = (%.2f, %.2f, %.2f)\n", dst2.x, dst2.y, dst2.z);
+                sprintf(msg, "Camera pos = (%.2f, %.2f, %.2f)", dst2.x, dst2.y, dst2.z);
                 Log::Print(msg);
             }
         }

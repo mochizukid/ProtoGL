@@ -9,18 +9,18 @@ namespace pgl {
 
 class Camera {
 public:
-    Camera() : _type(PERSPECTIVE), _fov(0), _aspect(0), _near(0), _far(0) {
+    Camera() : _type(PERSPECTIVE), _fovy(0), _aspect(0), _zNear(0), _zFar(0) {
         _up.Set(0, 1, 0);
         _target.Set(0, 0, 0);
         _position.Set(3, 4, 5);
     }
 
-    void SetupPerspectiveCamera(double fov, double aspect, double near, double far) {
+    void SetupPerspectiveCamera(double fovy, double aspect, double zNear, double zFar) {
         _type = PERSPECTIVE;
-        _fov = fov;
+        _fovy = fovy;
         _aspect = aspect;
-        _near = near;
-        _far = far;
+        _zNear = zNear;
+        _zFar = zFar;
     }
 
     void SetupOrthographicCamera(double left, double right, double top, double bottom, double near, double far);
@@ -53,7 +53,7 @@ public:
     void UpdateProjectionMatrix() {
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        gluPerspective(_fov, _aspect, _near, _far);
+        gluPerspective(_fovy, _aspect, _zNear, _zFar);
         gluLookAt(_position.x, _position.y, _position.z, 
                   _target.x, _target.y, _target.z, 
                   _up.x, _up.y, _up.z);
@@ -63,10 +63,10 @@ protected:
     enum Type { PERSPECTIVE, ORTHOGRAPHIC };
 
     Type _type;
-    double _fov;
+    double _fovy;
     double _aspect;
-    double _near;
-    double _far;
+    double _zNear;
+    double _zFar;
     Vector3 _position;
     Vector3 _up;
     Vector3 _target;

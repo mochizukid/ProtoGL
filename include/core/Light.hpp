@@ -1,5 +1,7 @@
 #pragma once
 
+#include <GL/freeglut.h>
+
 #include "Object3D.hpp"
 #include "Vector3.hpp"
 #include "Color.hpp"
