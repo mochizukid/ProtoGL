@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AA0C3482-CEA7-4EBF-BA0E-1DDFC5E3C66F}</ProjectGuid>
+    <ProjectGuid>{ADC01120-99E3-410E-816C-D60BD4E3DEBE}</ProjectGuid>
     <RootNamespace>ProtoGL</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -63,6 +63,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\app\Application.hpp" />
+    <ClInclude Include="..\..\include\app\View.hpp" />
+    <ClInclude Include="..\..\include\core\Camera.hpp" />
+    <ClInclude Include="..\..\include\core\Color.hpp" />
+    <ClInclude Include="..\..\include\core\Light.hpp" />
+    <ClInclude Include="..\..\include\core\Log.hpp" />
+    <ClInclude Include="..\..\include\core\Material.hpp" />
+    <ClInclude Include="..\..\include\core\Object3D.hpp" />
+    <ClInclude Include="..\..\include\core\Quaternion.hpp" />
+    <ClInclude Include="..\..\include\core\Renderer.hpp" />
+    <ClInclude Include="..\..\include\core\Scene.hpp" />
+    <ClInclude Include="..\..\include\core\Vector3.hpp" />
+    <ClInclude Include="..\..\include\objects\AxisObject.hpp" />
+    <ClInclude Include="..\..\include\objects\CubeObject.hpp" />
+    <ClInclude Include="..\..\include\objects\GridObject.hpp" />
+    <ClInclude Include="..\..\include\objects\SphereObject.hpp" />
+    <ClInclude Include="..\..\include\ProtoGL.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

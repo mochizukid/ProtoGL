@@ -18,3 +18,8 @@
 *~
 Debug/
 Release/
+*.sdf
+*.suo
+*.vcxproj.user
+*.opensdf
+ipch/

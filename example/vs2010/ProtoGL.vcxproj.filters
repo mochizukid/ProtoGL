@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="include\core">
+      <UniqueIdentifier>{7e00ae76-b4a5-4c22-a9cb-c0c500a94bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\app">
+      <UniqueIdentifier>{51f23f13-db95-4a4a-9969-abf06590d58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\objects">
+      <UniqueIdentifier>{a075d61c-a469-4e30-a4de-4df4cc56beaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\main.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\app\Application.hpp">
+      <Filter>include\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\app\View.hpp">
+      <Filter>include\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Vector3.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Camera.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Color.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Light.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Log.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Material.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Object3D.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Quaternion.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Renderer.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core\Scene.hpp">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ProtoGL.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\objects\AxisObject.hpp">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\objects\CubeObject.hpp">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\objects\GridObject.hpp">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\objects\SphereObject.hpp">
+      <Filter>include\objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

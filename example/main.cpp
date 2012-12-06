@@ -47,15 +47,14 @@ protected:
         cube2->Add(sphere);
 
 
-        Application::StartAnimationLoop();
+        Application::StartAnimationLoop(30);
         return true;
     }
 
     virtual bool onDisplay(void) {
         _cube->SetRotationY(_rotate);
         _cube2->SetRotationX(_rotate);
-        _rotate += 0.1;
-        
+        _rotate += 2;
         return true;
     }
 

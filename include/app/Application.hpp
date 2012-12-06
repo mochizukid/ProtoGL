@@ -16,7 +16,10 @@ public:
         }
     }
 
-    static void StartAnimationLoop() {
+    static void StartAnimationLoop(int fps = 30) {
+        assert(fps >= 0);
+        _tick_ms = 1000 / fps;
+        
         glutIdleFunc(IdleFunc);
     }
 
@@ -67,7 +70,12 @@ private:
     }
 
     static void IdleFunc(void) {
-        glutPostRedisplay();
+        int now = glutGet(GLUT_ELAPSED_TIME);
+        
+        if (now - _prev_time > _tick_ms) {
+            glutPostRedisplay();
+	        _prev_time = now;
+        }
     }
     
     Application(int &argc, char *argv[], View *view, int windowWidth, int windowHeight) {
@@ -103,9 +111,13 @@ private:
 
     static Application *_app;
     static View *_view;
+    static int _tick_ms;
+    static int _prev_time;
 };
 
 Application *Application::_app = NULL;
 View *Application::_view = NULL;
+int Application::_tick_ms = 0;
+int Application::_prev_time = 0;
 
 } // namespace pgl
