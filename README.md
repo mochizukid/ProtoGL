@@ -13,7 +13,6 @@ The target user for ProtoGL is the people who think:
 - full-scale 3D frameworks are too rich for simple prototyping
 
 
-
 ### Sample code ###
 
 ```c++
@@ -24,7 +23,7 @@ using namespace pgl;
 static const int WINDOW_W = 600, WINDOW_H = 400;
 
 class SampleView : public View {
-    protected:
+protected:
     virtual bool onCreate(void) {
         /*
          * setup camera
@@ -84,3 +83,6 @@ $ sudo apt-get install freeglut3 freegult3-dev
 
 ### Change log ###
 
+**r1** - 2012/12/06
+
+* initial release
