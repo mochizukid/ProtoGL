@@ -42,7 +42,7 @@ public:
     }
 
     void SetPosition(double x, double y, double z, double w) {
-        setArray4(_position, x, y, z, w);
+        setArray4(_position, (float)x, (float)y, (float)z, (float)w);
     }
     
 protected:
@@ -55,7 +55,10 @@ protected:
     }
     
     static void setArray4(float *array, const Color &color) {
-        array[0] = color.r; array[1] = color.g; array[2] = color.b; array[3] = color.a;
+        array[0] = (float)color.r; 
+		array[1] = (float)color.g; 
+		array[2] = (float)color.b; 
+		array[3] = (float)color.a;
     }
     
     static GLenum _nextLightId;

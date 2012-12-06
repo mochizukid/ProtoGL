@@ -3,7 +3,7 @@
 
 using namespace pgl;
 
-static const double WINDOW_W = 600, WINDOW_H = 400;
+static const int WINDOW_W = 600, WINDOW_H = 400;
 
 class SampleView : public View {
 public:

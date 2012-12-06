@@ -12,7 +12,7 @@ public:
                const Color &colorX = Color(1, 0, 0),
                const Color &colorY = Color(0, 1, 0),
                const Color &colorZ = Color(0, 0, 1),
-               int lineWidth = 2)
+               float lineWidth = 2)
         : _size(size), _colorX(colorX), _colorY(colorY), _colorZ(colorZ), _lineWidth(lineWidth) {}
 
 protected:
@@ -43,7 +43,7 @@ protected:
     Color _colorX;
     Color _colorY;
     Color _colorZ;
-    int _lineWidth;
+    float _lineWidth;
 };
 
 } // namespace pgl

@@ -9,7 +9,7 @@ namespace pgl {
 class GridObject : public Object3D {
 public:
     GridObject(double sizeX, double sizeZ, double segmentsX, double segmentsZ,
-               const Color &color = Color(0.5, 0.5, 0.5, 1), int lineWidth = 1)
+               const Color &color = Color(0.5, 0.5, 0.5, 1), float lineWidth = 1)
         : _sizeX(sizeX), _sizeZ(sizeZ), _segmentsX(segmentsX), _segmentsZ(segmentsZ),
           _color(color), _lineWidth(lineWidth) {}
 
@@ -38,7 +38,7 @@ protected:
     double _segmentsX;
     double _segmentsZ;
     Color _color;
-    int _lineWidth;
+    float _lineWidth;
 };
 
 } // namespace pgl

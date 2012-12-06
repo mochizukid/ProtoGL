@@ -12,7 +12,7 @@ class Renderer {
 public:
     Renderer() : _viewportWidth(0), _viewportHeigth(0) {}
 
-    void SetViewportSize(double width, double height) {
+    void SetViewportSize(int width, int height) {
         _viewportWidth = width;
         _viewportHeigth = height;
         
@@ -21,7 +21,7 @@ public:
 
     void SetClearColor(const Color &clearColor) {
         _clearColor = clearColor;
-        glClearColor(_clearColor.r, _clearColor.g, _clearColor.b, _clearColor.a);
+        glClearColor((float)_clearColor.r, (float)_clearColor.g, (float)_clearColor.b, (float)_clearColor.a);
     }
     
     void Render(Scene *scene, Camera *camera) {
