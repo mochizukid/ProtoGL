@@ -1,7 +1,7 @@
 TARGET = main
 OBJS = main.o
 
-CFLAGS = -I./include -Wall
+CFLAGS = -I../include -Wall
 LIBS = -lglut -lGLU -lGL
 
 $(TARGET): $(OBJS)
@@ -11,4 +11,4 @@ $(TARGET): $(OBJS)
 	$(CXX) -c -o $@ $< $(CFLAGS)
 
 clean:
-	$(RM) $(TARGET) $(OBJS) *~ include/*~ include/*/*~
+	$(RM) $(TARGET) $(OBJS) *~ ../include/*~ ../include/*/*~
