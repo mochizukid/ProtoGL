@@ -9,8 +9,9 @@ This is a simple 3D framework based on OpenGL.
 ### Target users for ProtoGL ###
 
 The target user for ProtoGL is the people who think:
-- native OpenGL APIs are too low level
-- full-scale 3D frameworks are too rich for simple prototyping
+- native OpenGL APIs are too low level.
+- full-scale 3D frameworks are too rich for simple prototyping.
+- what I need is just to move objects in a 3D space in easy way.
 
 
 ### Sample code ###

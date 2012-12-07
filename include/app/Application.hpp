@@ -10,9 +10,9 @@ namespace pgl {
 class Application {
 public:
     static void Start(int &argc, char *argv[],
-                      View *view, int windowWidth = 400, int windowHeight = 400) {
+                      View *view, int width = 400, int height = 400, const char *title = "ProtoGL") {
         if (_app == NULL) {
-            _app = new Application(argc, argv, view, windowWidth, windowHeight);
+            _app = new Application(argc, argv, view, width, height, title);
         }
     }
 
@@ -29,6 +29,7 @@ public:
 
 private:
     static void DisplayFunc(void) {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         _view->OnDisplay();
         glutSwapBuffers();
     }
@@ -78,16 +79,17 @@ private:
         }
     }
     
-    Application(int &argc, char *argv[], View *view, int windowWidth, int windowHeight) {
+    Application(int &argc, char *argv[], View *view, int width, int height, const char *title) {
         assert(view != NULL);
+        assert(width != 0 && height != 0 && title != NULL);
         
         _view = view;
             
         glutInit(&argc, argv);
         glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-        glutInitWindowSize(windowWidth, windowHeight);
+        glutInitWindowSize(width, height);
         glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
-        glutCreateWindow("ProtoGL");
+        glutCreateWindow(title);
 
         glEnable(GL_DEPTH_TEST);
 

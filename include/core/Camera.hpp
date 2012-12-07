@@ -9,7 +9,7 @@ namespace pgl {
 
 class Camera {
 public:
-    Camera() : _type(PERSPECTIVE), _fovy(0), _aspect(0), _zNear(0), _zFar(0) {
+    Camera() : _type(NONE), _fovy(0), _aspect(0), _zNear(0), _zFar(0) {
         _up.Set(0, 1, 0);
         _target.Set(0, 0, 0);
         _position.Set(3, 4, 5);
@@ -46,11 +46,11 @@ public:
     
     const Vector3 &GetUp() const { return _up; }
 
-    // TODO: target を中心に移動するメソッド(左ドラッグに連動)
-    // TODO: target に近づく/離れるメソッド(マウスホイールに連動)
-    // TODO: 平行移動するメソッド(右ドラッグに連動)
-    
     void UpdateProjectionMatrix() {
+        if (_type == NONE) {
+            return; // not initialized
+        }
+
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
         gluPerspective(_fovy, _aspect, _zNear, _zFar);
@@ -60,7 +60,7 @@ public:
     }
 
 protected:
-    enum Type { PERSPECTIVE, ORTHOGRAPHIC };
+    enum Type { PERSPECTIVE, ORTHOGRAPHIC, NONE };
 
     Type _type;
     double _fovy;

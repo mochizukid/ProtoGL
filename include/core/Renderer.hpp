@@ -25,8 +25,6 @@ public:
     }
     
     void Render(Scene *scene, Camera *camera) {
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
         camera->UpdateProjectionMatrix();
         scene->Render();
     }
